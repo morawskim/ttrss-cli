@@ -1,0 +1,15 @@
+{
+  "name": "morawskim/tt-rss-cli",
+  "description": "CLI interface for tt-rss.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcin Morawski",
+      "email": "marcin@morawskim.pl"
+    }
+  ],
+  "require": {
+    "symfony/console": "v2.7.6"
+  }
+}

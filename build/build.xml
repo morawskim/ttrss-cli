@@ -1,0 +1,21 @@
+<project name="ttrss-cli" default="phar">
+    <target name="phar">
+        <pharpackage
+                stub="stub.php"
+                destfile="ttrss-cli.phar"
+                basedir="../">
+            <fileset dir="../">
+                <include name="src/**" />
+                <include name="vendor/**" />
+            </fileset>
+            <metadata>
+                <element name="version" value="0.1.0" />
+                <element name="authors">
+                    <element name="Marcin Morawski">
+                        <element name="e-mail" value="marcin@morawskim.pl" />
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+    </target>
+</project>
