@@ -1,7 +1,7 @@
 {
   "name": "morawskim/tt-rss-cli",
   "description": "CLI interface for tt-rss.",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
@@ -9,7 +9,16 @@
       "email": "marcin@morawskim.pl"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "ttrssCli\\": "src/"
+    }
+  },
   "require": {
     "symfony/console": "v2.7.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*",
+    "phpunit/dbunit": "1.4.*"
   }
 }

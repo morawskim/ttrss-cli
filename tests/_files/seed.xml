@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="ttrss">
+	<table_data name="ttrss_prefs_sections">
+		<row>
+			<field name="id">1</field>
+			<field name="order_id">0</field>
+		</row>
+		<row>
+			<field name="id">2</field>
+			<field name="order_id">1</field>
+		</row>
+		<row>
+			<field name="id">3</field>
+			<field name="order_id">3</field>
+		</row>
+		<row>
+			<field name="id">4</field>
+			<field name="order_id">2</field>
+		</row>
+	</table_data>
+	<table_data name="ttrss_prefs_types">
+		<row>
+			<field name="id">1</field>
+			<field name="type_name">bool</field>
+		</row>
+		<row>
+			<field name="id">2</field>
+			<field name="type_name">string</field>
+		</row>
+		<row>
+			<field name="id">3</field>
+			<field name="type_name">integer</field>
+		</row>
+	</table_data>
+
+	<table_data name="ttrss_users">
+		<row>
+			<field name="id">1</field>
+			<field name="login">admin</field>
+			<field name="pwd_hash">SHA1:5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</field>
+			<field name="last_login" xsi:nil="true" />
+			<field name="access_level">10</field>
+			<field name="email"></field>
+			<field name="full_name"></field>
+			<field name="email_digest">0</field>
+			<field name="last_digest_sent" xsi:nil="true" />
+			<field name="salt"></field>
+			<field name="created" xsi:nil="true" />
+			<field name="twitter_oauth" xsi:nil="true" />
+			<field name="otp_enabled">0</field>
+			<field name="resetpass_token" xsi:nil="true" />
+		</row>
+	</table_data>
+
+	<table_data name="ttrss_access_keys">
+	</table_data>
+	<table_data name="ttrss_archived_feeds">
+	</table_data>
+	<table_data name="ttrss_cat_counters_cache">
+	</table_data>
+	<table_data name="ttrss_counters_cache">
+	</table_data>
+	<table_data name="ttrss_enclosures">
+	</table_data>
+	<table_data name="ttrss_entries">
+	</table_data>
+	<table_data name="ttrss_entry_comments">
+	</table_data>
+	<table_data name="ttrss_error_log">
+	</table_data>
+	<table_data name="ttrss_feed_categories">
+	</table_data>
+	<table_data name="ttrss_feedbrowser_cache">
+	</table_data>
+	<table_data name="ttrss_feeds">
+	<row>
+		<field name="id">1</field>
+		<field name="owner_uid">1</field>
+		<field name="title">Tiny Tiny RSS: Forum</field>
+		<field name="cat_id" xsi:nil="true" />
+		<field name="feed_url">http://tt-rss.org/forum/rss.php</field>
+		<field name="icon_url"></field>
+		<field name="update_interval">0</field>
+		<field name="purge_interval">0</field>
+		<field name="last_updated">0000-00-00 00:00:00</field>
+		<field name="last_error"></field>
+		<field name="favicon_avg_color" xsi:nil="true" />
+		<field name="site_url"></field>
+		<field name="auth_login"></field>
+		<field name="auth_pass"></field>
+		<field name="parent_feed" xsi:nil="true" />
+		<field name="private">0</field>
+		<field name="rtl_content">0</field>
+		<field name="hidden">0</field>
+		<field name="include_in_digest">1</field>
+		<field name="cache_images">0</field>
+		<field name="hide_images">0</field>
+		<field name="cache_content">0</field>
+		<field name="auth_pass_encrypted">0</field>
+		<field name="last_viewed" xsi:nil="true" />
+		<field name="last_update_started" xsi:nil="true" />
+		<field name="always_display_enclosures">0</field>
+		<field name="update_method">0</field>
+		<field name="order_id">0</field>
+		<field name="mark_unread_on_update">0</field>
+		<field name="update_on_checksum_change">0</field>
+		<field name="strip_images">0</field>
+		<field name="view_settings"></field>
+		<field name="pubsub_state">0</field>
+		<field name="favicon_last_checked" xsi:nil="true" />
+		<field name="feed_language"></field>
+	</row>
+	</table_data>
+	<table_data name="ttrss_filter_actions">
+	<row>
+		<field name="id">1</field>
+		<field name="name">filter</field>
+		<field name="description">Delete article</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="name">catchup</field>
+		<field name="description">Mark as read</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="name">mark</field>
+		<field name="description">Set starred</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="name">tag</field>
+		<field name="description">Assign tags</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="name">publish</field>
+		<field name="description">Publish article</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="name">score</field>
+		<field name="description">Modify score</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="name">label</field>
+		<field name="description">Assign label</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="name">stop</field>
+		<field name="description">Stop / Do nothing</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="name">plugin</field>
+		<field name="description">Invoke plugin</field>
+	</row>
+	</table_data>
+	<table_data name="ttrss_filter_types">
+	<row>
+		<field name="id">1</field>
+		<field name="name">title</field>
+		<field name="description">Title</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="name">content</field>
+		<field name="description">Content</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="name">both</field>
+		<field name="description">Title or Content</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="name">link</field>
+		<field name="description">Link</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="name">date</field>
+		<field name="description">Article Date</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="name">author</field>
+		<field name="description">Author</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="name">tag</field>
+		<field name="description">Article Tags</field>
+	</row>
+	</table_data>
+	<table_data name="ttrss_filters2">
+	</table_data>
+	<table_data name="ttrss_filters2_actions">
+	</table_data>
+	<table_data name="ttrss_filters2_rules">
+	</table_data>
+	<table_data name="ttrss_labels2">
+	</table_data>
+	<table_data name="ttrss_linked_feeds">
+	</table_data>
+	<table_data name="ttrss_linked_instances">
+	</table_data>
+	<table_data name="ttrss_plugin_storage">
+	</table_data>
+	<table_data name="ttrss_prefs">
+	<row>
+		<field name="pref_name">ALLOW_DUPLICATE_POSTS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">AUTO_ASSIGN_LABELS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">3</field>
+		<field name="access_level">1</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">BLACKLISTED_TAGS</field>
+		<field name="type_id">2</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value">main, generic, misc, uncategorized, blog, blogroll, general, news</field>
+	</row>
+	<row>
+		<field name="pref_name">CDM_AUTO_CATCHUP</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">CDM_EXPANDED</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">COMBINED_DISPLAY_MODE</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">CONFIRM_FEED_CATCHUP</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">DEFAULT_ARTICLE_LIMIT</field>
+		<field name="type_id">3</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">30</field>
+	</row>
+	<row>
+		<field name="pref_name">DEFAULT_UPDATE_INTERVAL</field>
+		<field name="type_id">3</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">30</field>
+	</row>
+	<row>
+		<field name="pref_name">DIGEST_CATCHUP</field>
+		<field name="type_id">1</field>
+		<field name="section_id">4</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">DIGEST_ENABLE</field>
+		<field name="type_id">1</field>
+		<field name="section_id">4</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">DIGEST_PREFERRED_TIME</field>
+		<field name="type_id">2</field>
+		<field name="section_id">4</field>
+		<field name="access_level">0</field>
+		<field name="def_value">00:00</field>
+	</row>
+	<row>
+		<field name="pref_name">ENABLE_API_ACCESS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">ENABLE_FEED_CATS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">FEEDS_SORT_BY_UNREAD</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">FRESH_ARTICLE_MAX_AGE</field>
+		<field name="type_id">3</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">24</field>
+	</row>
+	<row>
+		<field name="pref_name">HIDE_READ_FEEDS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">HIDE_READ_SHOWS_SPECIAL</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">LONG_DATE_FORMAT</field>
+		<field name="type_id">2</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value">D, M d Y - G:i</field>
+	</row>
+	<row>
+		<field name="pref_name">ON_CATCHUP_SHOW_NEXT_FEED</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">PURGE_OLD_DAYS</field>
+		<field name="type_id">3</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">60</field>
+	</row>
+	<row>
+		<field name="pref_name">PURGE_UNREAD_ARTICLES</field>
+		<field name="type_id">1</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">REVERSE_HEADLINES</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">SHORT_DATE_FORMAT</field>
+		<field name="type_id">2</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value">M d, G:i</field>
+	</row>
+	<row>
+		<field name="pref_name">SHOW_CONTENT_PREVIEW</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">SORT_HEADLINES_BY_FEED_DATE</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">SSL_CERT_SERIAL</field>
+		<field name="type_id">2</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">STRIP_IMAGES</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">STRIP_UNSAFE_TAGS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">3</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">USER_CSS_THEME</field>
+		<field name="type_id">2</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">USER_LANGUAGE</field>
+		<field name="type_id">2</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">USER_STYLESHEET</field>
+		<field name="type_id">2</field>
+		<field name="section_id">2</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">USER_TIMEZONE</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">Automatic</field>
+	</row>
+	<row>
+		<field name="pref_name">VFEED_GROUP_BY_FEED</field>
+		<field name="type_id">1</field>
+		<field name="section_id">2</field>
+		<field name="access_level">1</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_COLLAPSED_FEEDLIST</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_COLLAPSED_LABELS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_COLLAPSED_SPECIAL</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_COLLAPSED_UNCAT</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_DEFAULT_INCLUDE_CHILDREN</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_DEFAULT_VIEW_LIMIT</field>
+		<field name="type_id">3</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">30</field>
+	</row>
+	<row>
+		<field name="pref_name">_DEFAULT_VIEW_MODE</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">adaptive</field>
+	</row>
+	<row>
+		<field name="pref_name">_DEFAULT_VIEW_ORDER_BY</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">default</field>
+	</row>
+	<row>
+		<field name="pref_name">_ENABLED_PLUGINS</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_BROWSE_CATS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">true</field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_ENABLE_CATS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_HIDE_READ</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_REVERSE_HEADLINES</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_SHOW_IMAGES</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_MOBILE_SORT_FEEDS_UNREAD</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_PREFS_ACTIVE_TAB</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value"></field>
+	</row>
+	<row>
+		<field name="pref_name">_PREFS_SHOW_EMPTY_CATS</field>
+		<field name="type_id">1</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">false</field>
+	</row>
+	<row>
+		<field name="pref_name">_THEME_ID</field>
+		<field name="type_id">2</field>
+		<field name="section_id">1</field>
+		<field name="access_level">0</field>
+		<field name="def_value">0</field>
+	</row>
+	</table_data>
+
+	<table_data name="ttrss_sessions">
+	</table_data>
+	<table_data name="ttrss_settings_profiles">
+	</table_data>
+	<table_data name="ttrss_tags">
+	</table_data>
+	<table_data name="ttrss_user_entries">
+	</table_data>
+	<table_data name="ttrss_user_labels2">
+	</table_data>
+	<table_data name="ttrss_user_prefs">
+	</table_data>
+
+	<table_data name="ttrss_version">
+	<row>
+		<field name="schema_version">129</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

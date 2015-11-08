@@ -1,0 +1,14 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
+        bootstrap="bootstrap.php"
+        colors="true">
+
+        <php>
+            <var name="DB_DNS" value="mysql:host=localhost;dbname=ttrss"/>
+            <var name="DB_USER" value="root" />
+            <var name="DB_PASS" value="toor" />
+            <var name="DB_SCHEMA" value="ttrss" />
+            <var name="TTRSS_DIR" value="/home/marcin/Projekty/tt-rss/" />
+        </php>
+</phpunit>
