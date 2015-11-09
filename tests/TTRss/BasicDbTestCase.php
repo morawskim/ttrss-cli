@@ -6,7 +6,7 @@ use PHPUnit_Extensions_Database_DataSet_IDataSet;
 use PHPUnit_Extensions_Database_DB_IDatabaseConnection;
 use ttrssCli\PHPUnit\MySQLXmlStringDataSet;
 
-class BasicDbTestCase extends \PHPUnit_Extensions_Database_TestCase
+abstract class BasicDbTestCase extends \PHPUnit_Extensions_Database_TestCase
 {
     /**
      * Returns the test database connection.

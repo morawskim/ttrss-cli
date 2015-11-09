@@ -156,4 +156,45 @@ class TTRss
 
         $obj->editSave();
     }
+
+    public function changeUserEmail($login, $email)
+    {
+//        error_reporting(E_ALL);
+        $authBasic = new \Auth_Base();
+        $userId = $authBasic->find_user_by_login($login);
+
+        if (false === $userId) {
+            throw new UserNotExist(sprintf('User "%s" not exist in ttrss.', $login));
+        }
+
+        $_REQUEST["login"] = $login;
+        $_REQUEST["id"] = $userId;
+        $_REQUEST["email"] = $email;
+        $_REQUEST["password"] = '';
+        $_SESSION["uid"] = $userId;
+        $_SESSION["clientTzOffset"] = 0;
+        $_SESSION["access_level"] = 10;
+
+        $obj = new \Pref_Users([]);
+        ob_start();
+        $obj->edit();
+        $details = ob_get_clean();
+        $dom = new \DOMDocument();
+        $searchPage = mb_convert_encoding($details, 'HTML-ENTITIES', "UTF-8");
+        $result = $dom->loadHTML("<body>$searchPage</body>");
+        if (!$result) {
+            throw new \RuntimeException(sprintf('Cant parse ttrss response.'));
+        }
+
+        $xpath = new \DOMXPath($dom);
+        $element = $xpath->query('//input[@name="access_level"]');
+        if ($element->length != 1) {
+            throw new \RuntimeException(sprintf('Not found access_level element in ttrss response.'));
+        }
+        $accessLevel = $element->item(0)->attributes->getNamedItem('value')->nodeValue;
+
+        $_REQUEST["access_level"] = $accessLevel;
+
+        $obj->editSave();
+    }
 }

@@ -6,11 +6,16 @@ use PHPUnit_Extensions_Database_DataSet_IDataSet;
 use PHPUnit_Extensions_Database_DB_IDatabaseConnection;
 use ttrssCli\PHPUnit\MySQLXmlStringDataSet;
 use ttrssCli\Services\TTRss;
+use ttrssCliTests\TTRss\BasicDbTestCase;
 
-class UserTest extends \PHPUnit_Extensions_Database_TestCase
+class UserTest extends BasicDbTestCase
 {
     protected $ds = null;
 
+    /**
+     * @runInSeparateProcess
+     * @throws \ttrssCli\Exceptions\UserNotExist
+     */
     public function testChangePassword()
     {
         $login = 'admin';
@@ -34,35 +39,22 @@ class UserTest extends \PHPUnit_Extensions_Database_TestCase
     }
 
     /**
-     * Returns the test database connection.
-     *
-     * @return PHPUnit_Extensions_Database_DB_IDatabaseConnection
+     * @runInSeparateProcess
+     * @throws \ttrssCli\Exceptions\UserNotExist
      */
-    protected function getConnection()
+    public function testChangeEmail()
     {
-        $pdo = new \PDO($GLOBALS['DB_DNS'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
-        return $this->createDefaultDBConnection($pdo, $GLOBALS['DB_SCHEMA']);
+        $login = 'admin';
+        $email = 'test@test.example';
+
+        $ttrss = new TTRss($GLOBALS['TTRSS_DIR']);
+        $ttrss->init();
+        $ttrss->changeUserEmail($login, $email);
+
+        $ds = new MySQLXmlStringDataSet(__DIR__ . '/../_files/changeUserEmail.xml');
+        $this->assertTablesEqual(
+            $ds->getTable('ttrss_users'),
+            $this->getConnection()->createDataSet(['ttrss_users'])->getTable('ttrss_users')
+        );
     }
-
-    /**
-     * Returns the test dataset.
-     *
-     * @return PHPUnit_Extensions_Database_DataSet_IDataSet
-     */
-    protected function getDataSet()
-    {
-        return new MySQLXmlStringDataSet(__DIR__ . '/../_files/seed.xml');
-    }
-
-    /**
-     * Returns the database operation executed in test cleanup.
-     *
-     * @return \PHPUnit_Extensions_Database_Operation_DatabaseOperation
-     */
-    protected function getTearDownOperation()
-    {
-        return \PHPUnit_Extensions_Database_Operation_Factory::CLEAN_INSERT();
-    }
-
-
 }

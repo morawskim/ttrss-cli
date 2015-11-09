@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="ttrss">
+        <table_data name="ttrss_users">
+            <row>
+                <field name="id">1</field>
+                <field name="login">admin</field>
+                <field name="pwd_hash">SHA1:5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</field>
+                <field name="last_login" xsi:nil="true" />
+                <field name="access_level">10</field>
+                <field name="email">test@test.example</field>
+                <field name="full_name"></field>
+                <field name="email_digest">0</field>
+                <field name="last_digest_sent" xsi:nil="true" />
+                <field name="salt"></field>
+                <field name="created" xsi:nil="true" />
+                <field name="twitter_oauth" xsi:nil="true" />
+                <field name="otp_enabled">0</field>
+                <field name="resetpass_token" xsi:nil="true" />
+            </row>
+        </table_data>
+    </database>
+</mysqldump>

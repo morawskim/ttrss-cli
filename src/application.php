@@ -13,7 +13,9 @@ $application->getDefinition()->addOption(
     new InputOption('tt-rss', 'p', InputOption::VALUE_OPTIONAL,
         'The path to tt-rss docroot', ''));
 
-$command = new \ttrssCli\Commands\ChangeUserPassword();
+$commandChangePassword = new \ttrssCli\Commands\ChangeUserPassword();
+$commandChangeEmail = new \ttrssCli\Commands\ChangeUserEmail();
 $application->setCatchExceptions(true);
-$application->add($command);
+$application->add($commandChangePassword);
+$application->add($commandChangeEmail);
 $application->run();

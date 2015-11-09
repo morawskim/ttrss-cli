@@ -11,7 +11,9 @@
   ],
   "autoload": {
     "psr-4": {
-      "ttrssCli\\": "src/"
+      "ttrssCli\\": "src/",
+      "ttrssCliTests\\": "tests/"
+
     }
   },
   "require": {
