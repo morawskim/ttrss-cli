@@ -15,7 +15,9 @@ $application->getDefinition()->addOption(
 
 $commandChangePassword = new \ttrssCli\Commands\ChangeUserPassword();
 $commandChangeEmail = new \ttrssCli\Commands\ChangeUserEmail();
+$commandOpmlExport = new \ttrssCli\Commands\OpmlExport();
 $application->setCatchExceptions(true);
 $application->add($commandChangePassword);
 $application->add($commandChangeEmail);
+$application->add($commandOpmlExport);
 $application->run();

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <dateCreated>Mon, 09 Nov 2015 10:10:30 +0000</dateCreated>
+    <title>Tiny Tiny RSS Feed Export</title>
+  </head>
+  <body>
+    <outline type="rss" text="Tiny Tiny RSS: Forum" xmlUrl="http://tt-rss.org/forum/rss.php"/>
+  </body>
+</opml>

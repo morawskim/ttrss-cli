@@ -197,4 +197,25 @@ class TTRss
 
         $obj->editSave();
     }
+
+    public function exportOpml($login, $showSettings)
+    {
+        $authBasic = new \Auth_Base();
+        $userId = $authBasic->find_user_by_login($login);
+
+        if (false === $userId) {
+            throw new UserNotExist(sprintf('User "%s" not exist in ttrss.', $login));
+        }
+
+        $_REQUEST["filename"] = 'TinyTinyRSS.opml';
+        $_REQUEST["settings"] = !!$showSettings;
+        $_SESSION["uid"] = $userId;
+
+        ob_start();
+        $opml = new \Opml([]);
+        $opml->export();
+        $content = ob_get_clean();
+
+        return $content;
+    }
 }

@@ -588,6 +588,318 @@
 	<table_data name="ttrss_user_labels2">
 	</table_data>
 	<table_data name="ttrss_user_prefs">
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">ALLOW_DUPLICATE_POSTS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">AUTO_ASSIGN_LABELS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">BLACKLISTED_TAGS</field>
+			<field name="value">main, generic, misc, uncategorized, blog, blogroll, general, news</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">CDM_AUTO_CATCHUP</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">CDM_EXPANDED</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">COMBINED_DISPLAY_MODE</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">CONFIRM_FEED_CATCHUP</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">DEFAULT_ARTICLE_LIMIT</field>
+			<field name="value">30</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">DEFAULT_UPDATE_INTERVAL</field>
+			<field name="value">30</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">DIGEST_CATCHUP</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">DIGEST_ENABLE</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">DIGEST_PREFERRED_TIME</field>
+			<field name="value">00:00</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">ENABLE_API_ACCESS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">ENABLE_FEED_CATS</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">FEEDS_SORT_BY_UNREAD</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">FRESH_ARTICLE_MAX_AGE</field>
+			<field name="value">24</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">HIDE_READ_FEEDS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">HIDE_READ_SHOWS_SPECIAL</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">LONG_DATE_FORMAT</field>
+			<field name="value">D, M d Y - G:i</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">ON_CATCHUP_SHOW_NEXT_FEED</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">PURGE_OLD_DAYS</field>
+			<field name="value">60</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">PURGE_UNREAD_ARTICLES</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">REVERSE_HEADLINES</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">SHORT_DATE_FORMAT</field>
+			<field name="value">M d, G:i</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">SHOW_CONTENT_PREVIEW</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">SORT_HEADLINES_BY_FEED_DATE</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">SSL_CERT_SERIAL</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">STRIP_IMAGES</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">STRIP_UNSAFE_TAGS</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">USER_CSS_THEME</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">USER_LANGUAGE</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">USER_STYLESHEET</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">USER_TIMEZONE</field>
+			<field name="value">Automatic</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">VFEED_GROUP_BY_FEED</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_COLLAPSED_FEEDLIST</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_COLLAPSED_LABELS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_COLLAPSED_SPECIAL</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_COLLAPSED_UNCAT</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_DEFAULT_INCLUDE_CHILDREN</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_DEFAULT_VIEW_LIMIT</field>
+			<field name="value">30</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_DEFAULT_VIEW_MODE</field>
+			<field name="value">adaptive</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_DEFAULT_VIEW_ORDER_BY</field>
+			<field name="value">default</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_ENABLED_PLUGINS</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_BROWSE_CATS</field>
+			<field name="value">true</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_ENABLE_CATS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_HIDE_READ</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_REVERSE_HEADLINES</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_SHOW_IMAGES</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_MOBILE_SORT_FEEDS_UNREAD</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_PREFS_ACTIVE_TAB</field>
+			<field name="value"></field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_PREFS_SHOW_EMPTY_CATS</field>
+			<field name="value">false</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
+		<row>
+			<field name="owner_uid">1</field>
+			<field name="pref_name">_THEME_ID</field>
+			<field name="value">0</field>
+			<field name="profile" xsi:nil="true" />
+		</row>
 	</table_data>
 
 	<table_data name="ttrss_version">
