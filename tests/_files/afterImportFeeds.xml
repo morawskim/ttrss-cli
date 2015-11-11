@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="ttrss">
+        <table_data name="ttrss_feed_categories">
+            <row>
+                <field name="id">1</field>
+                <field name="owner_uid">1</field>
+                <field name="title">PHP</field>
+                <field name="collapsed">0</field>
+                <field name="order_id">0</field>
+                <field name="parent_cat" xsi:nil="true" />
+                <field name="view_settings"></field>
+            </row>
+        </table_data>
+        <table_data name="ttrss_feeds">
+            <row>
+                <field name="id">1</field>
+                <field name="owner_uid">1</field>
+                <field name="title">Tiny Tiny RSS: Forum</field>
+                <field name="cat_id" xsi:nil="true" />
+                <field name="feed_url">http://tt-rss.org/forum/rss.php</field>
+                <field name="icon_url"></field>
+                <field name="update_interval">0</field>
+                <field name="purge_interval">0</field>
+                <field name="last_updated">0000-00-00 00:00:00</field>
+                <field name="last_error"></field>
+                <field name="favicon_avg_color" xsi:nil="true" />
+                <field name="site_url"></field>
+                <field name="auth_login"></field>
+                <field name="auth_pass"></field>
+                <field name="parent_feed" xsi:nil="true" />
+                <field name="private">0</field>
+                <field name="rtl_content">0</field>
+                <field name="hidden">0</field>
+                <field name="include_in_digest">1</field>
+                <field name="cache_images">0</field>
+                <field name="hide_images">0</field>
+                <field name="cache_content">0</field>
+                <field name="auth_pass_encrypted">0</field>
+                <field name="last_viewed" xsi:nil="true" />
+                <field name="last_update_started" xsi:nil="true" />
+                <field name="always_display_enclosures">0</field>
+                <field name="update_method">0</field>
+                <field name="order_id">0</field>
+                <field name="mark_unread_on_update">0</field>
+                <field name="update_on_checksum_change">0</field>
+                <field name="strip_images">0</field>
+                <field name="view_settings"></field>
+                <field name="pubsub_state">0</field>
+                <field name="favicon_last_checked" xsi:nil="true" />
+                <field name="feed_language"></field>
+            </row>
+            <row>
+                <field name="id">2</field>
+                <field name="owner_uid">1</field>
+                <field name="title">PHP.net releases</field>
+                <field name="cat_id">1</field>
+                <field name="feed_url">http://php.net/releases/feed.php</field>
+                <field name="icon_url"></field>
+                <field name="update_interval">0</field>
+                <field name="purge_interval">0</field>
+                <field name="last_updated">0000-00-00 00:00:00</field>
+                <field name="last_error"></field>
+                <field name="favicon_avg_color" xsi:nil="true" />
+                <field name="site_url">http://php.net/releases/</field>
+                <field name="auth_login"></field>
+                <field name="auth_pass"></field>
+                <field name="parent_feed" xsi:nil="true" />
+                <field name="private">0</field>
+                <field name="rtl_content">0</field>
+                <field name="hidden">0</field>
+                <field name="include_in_digest">1</field>
+                <field name="cache_images">0</field>
+                <field name="hide_images">0</field>
+                <field name="cache_content">0</field>
+                <field name="auth_pass_encrypted">0</field>
+                <field name="last_viewed" xsi:nil="true" />
+                <field name="last_update_started" xsi:nil="true" />
+                <field name="always_display_enclosures">0</field>
+                <field name="update_method">0</field>
+                <field name="order_id">0</field>
+                <field name="mark_unread_on_update">0</field>
+                <field name="update_on_checksum_change">0</field>
+                <field name="strip_images">0</field>
+                <field name="view_settings"></field>
+                <field name="pubsub_state">0</field>
+                <field name="favicon_last_checked" xsi:nil="true" />
+                <field name="feed_language"></field>
+            </row>
+        </table_data>
+    </database>
+</mysqldump>

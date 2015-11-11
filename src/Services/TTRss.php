@@ -218,4 +218,38 @@ class TTRss
 
         return $content;
     }
+
+    public function importOpml($login, $opmlPath)
+    {
+        $authBasic = new \Auth_Base();
+        $userId = $authBasic->find_user_by_login($login);
+
+        if (false === $userId) {
+            throw new UserNotExist(sprintf('User "%s" not exist in ttrss.', $login));
+        }
+
+        if (!is_file($opmlPath)) {
+            throw new \InvalidArgumentException(sprintf('"%s" is not file', $opmlPath));
+        }
+
+        if (!is_readable($opmlPath)) {
+            throw new \InvalidArgumentException(sprintf('File "%s" is not readable', $opmlPath));
+        }
+
+        $doc = new \DOMDocument();
+        $result = $doc->loadXML(file_get_contents($opmlPath));
+        if (false === $result) {
+            throw new \RuntimeException(sprintf('Can\'t load OPML file "%s"', $opmlPath));
+        }
+
+        $_SESSION["uid"] = $userId;
+        ob_start();
+        $opml = new \Opml([]);
+        $reflector = new \ReflectionObject($opml);
+        $method = $reflector->getMethod('opml_import_category');
+        $method->setAccessible(true);
+        $method->invokeArgs($opml, [$doc, false, $userId, false]);
+        $content = ob_get_clean();
+        return str_replace('<br/>', PHP_EOL, $content);
+    }
 }

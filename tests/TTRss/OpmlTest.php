@@ -2,6 +2,7 @@
 
 namespace ttrssCliTests\TTRss;
 
+use ttrssCli\PHPUnit\MySQLXmlStringDataSet;
 use ttrssCli\Services\TTRss;
 
 class OpmlTest extends BasicDbTestCase
@@ -52,5 +53,25 @@ class OpmlTest extends BasicDbTestCase
 
         $this->assertEquals($document->firstChild->nodeName, $opml->firstChild->nodeName);
         $this->assertEqualXMLStructure($document->firstChild, $opml->firstChild);
+    }
+
+    /**
+     * @runInSeparateProcess
+     */
+    public function testImportOpml()
+    {
+        $login = 'admin';
+
+        $ttrss = new TTRss($GLOBALS['TTRSS_DIR']);
+        $ttrss->init();
+        $ttrss->importOpml($login, __DIR__ . '/../_files/import.opml');
+
+        $ds = new MySQLXmlStringDataSet(__DIR__ . '/../_files/afterImportFeeds.xml');
+        $actual = $this->getConnection()->createDataSet(['ttrss_feed_categories', 'ttrss_feeds']);
+
+        $this->assertDataSetsEqual(
+            $ds,
+            $actual
+        );
     }
 }
