@@ -11,9 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "ttrssCli\\": "src/",
+      "ttrssCli\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "ttrssCliTests\\": "tests/"
-
     }
   },
   "require": {
