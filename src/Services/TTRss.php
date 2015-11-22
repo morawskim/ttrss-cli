@@ -252,4 +252,19 @@ class TTRss
         $content = ob_get_clean();
         return str_replace('<br/>', PHP_EOL, $content);
     }
+
+    public function sendTestEmail($to, $name = null)
+    {
+        if (null === $name) {
+            $name = ucfirst(strstr($to, '@', true));
+        }
+
+        $subject = __("[tt-rss] Testing sending email");
+        $message = 'Testing sending email.';
+        $mail = new \ttrssMailer();
+        $rc = $mail->quickMail($to, $name, $subject, $message, false);
+        if (!$rc) {
+            throw new \RuntimeException($mail->ErrorInfo);
+        }
+    }
 }
